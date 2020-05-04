@@ -14,3 +14,4 @@ We provide 3 scripts for convenience and two directories for organization:
 * `test.sh`: Automatically runs your compiler against test programs in the programs directory and checks the output
 
 Comments found in both files provide more details as to the requirements. Since a large portion of grading is performed automatically, please ensure to follow the input/output specifications **exactly**. You must be able to run the provided scripts on the SOCS Trottier machines.
+# GoLang-Compiler
