@@ -1,17 +1,14 @@
-# Assignment Template
-
-To organize your assignments and project for class, please follow the skeleton provided in this repository
-
-We provide 3 scripts for convenience and two directories for organization:
-
-* `programs`: Test programs are organized by compilation phase and by expected result. Valid programs should output `OK` and status code `0`, while invalid programs should output `Error: <description>` and status code `1`.
-  * `Scan+parse`: Runs both the scanner and parser phases
-  * `Typecheck`: Runs until the end of the typechecker phase
-  * `Codegen`: Runs until your compiler outputs the target code
-* `src`: Source code for your assignment
-* `build.sh`: Builds your compiler using `Make` or similar. You should replace the commands here if necessary to build your compiler
-* `run.sh`: Runs your compiler using two arguments (mode - $1 and input file - $2). You should replace the commands here if necessary to invoke your compiler
-* `test.sh`: Automatically runs your compiler against test programs in the programs directory and checks the output
-
-Comments found in both files provide more details as to the requirements. Since a large portion of grading is performed automatically, please ensure to follow the input/output specifications **exactly**. You must be able to run the provided scripts on the SOCS Trottier machines.
 # GoLang-Compiler
+
+This is a compiler implementation for a subset of the Go language, GoLite.   
+
+There are 7 main stages of a compiler:   
+Scanner, Parser, Weeder, AST, Symbol Table, Typechecker and Code Generator.   
+
+GoLite adopts most of Go's syntax but on a smaller pool of base types and build-in functions.   
+Most noticeably, GoLite only supports the ASCII charset, unlike Go which is UTF-8 encoded. Also, GoLite disallows slice/array/struct literals.   
+Nevertheless, GoLite supports all of Go's operators, control-flow structures and the type declaration feature. 
+
+The flex/bison model in C as our primary tool for the implementation. 
+The implementation language is C and the target language is Java.
+This compiler convert GoLang to Java code.
